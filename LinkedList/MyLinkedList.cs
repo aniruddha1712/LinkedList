@@ -34,6 +34,10 @@ namespace LinkedList
             this.head = newNode;
             Console.WriteLine("{0} is inserted into LinkedList", newNode.data);
         }
+        public void Append(int data)
+        {
+            AddLast(data);
+        }
         public void Display()
         {
             Console.WriteLine("Displaying Nodes:");
