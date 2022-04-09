@@ -90,6 +90,23 @@ namespace LinkedList
             temp.next = null;
             return delNode;
         }
+        public void Find(int data)
+        {
+            Node temp = head;
+            int search = 0;
+            while (temp != null)
+            {
+                if (temp.data == data)
+                {
+                    search = 1;
+                }
+                temp = temp.next;
+            }
+            if (search == 1)
+                Console.WriteLine("\n{0} is present in the linkedlist", data);
+            else
+                Console.WriteLine("\n{0} is not present in the linkedlist", data);
+        }
 
         public void Display()
         {
