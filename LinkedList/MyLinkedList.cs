@@ -136,6 +136,19 @@ namespace LinkedList
                 temp = temp.next;
             }
         }
+        public void DeleteElement(int data)
+        {
+            Node temp = head;
+            while (temp.next != null)
+            {
+                if (temp.next.data == data)
+                {
+                    temp.next = temp.next.next;
+                    Console.WriteLine("\n{0} is Deleted", data);
+                }
+                temp = temp.next;
+            }
+        }
         public void Display()
         {
             Console.WriteLine("Displaying Nodes:");
@@ -153,6 +166,17 @@ namespace LinkedList
                     temp = temp.next;
                 }
             }
+        }
+        public void Size()
+        {
+            int size = 0;
+            Node temp = this.head;
+            while (temp != null)
+            {
+                temp = temp.next;
+                size++;
+            }
+            Console.WriteLine("\nSize of the LinkedList is {0}", size);
         }
     }
 }

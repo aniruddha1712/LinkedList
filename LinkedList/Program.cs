@@ -17,7 +17,7 @@ namespace LinkedList
             Console.WriteLine("\n1. Add element at last position \n2. Add element at first position " +
                 "\n3. Add element at last position using Append method\n4. Insert element at perticular position" +
                 "\n5. Delete first element of Linkedlist\n6. Delete Last Element of Linkedlist\n7. Find Node with value" +
-                "\n8. Insert After value");
+                "\n8. Insert After value\n9. Delete particular value");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -82,6 +82,17 @@ namespace LinkedList
                     linkedList.AddLast(70);
                     linkedList.Display();
                     linkedList.InsertAfter(30, 40);      
+                    linkedList.Display();
+                    break;
+                case 9:
+                    Console.WriteLine("Delete particular value");
+                    linkedList.AddLast(56);
+                    linkedList.AddLast(30);
+                    linkedList.AddLast(70);
+                    linkedList.InsertAfter(30, 40);
+                    linkedList.Display();
+                    linkedList.DeleteElement(40);
+                    linkedList.Size();
                     linkedList.Display();
                     break;
                 default:
