@@ -69,6 +69,27 @@ namespace LinkedList
                 Console.WriteLine("\nFirst element deleted");
             }
         }
+        public int PopLast()
+        {
+            Node temp = this.head;
+            if (this.head == null) 
+            {
+                Console.WriteLine("LinkedList id empty");
+                return 0;
+            }
+            if (this.head.next == null) 
+            {
+                this.head = null;
+                return 0;
+            }
+            while (temp.next.next != null)
+            {
+                temp = temp.next;
+            }
+            int delNode = temp.next.data;
+            temp.next = null;
+            return delNode;
+        }
 
         public void Display()
         {
