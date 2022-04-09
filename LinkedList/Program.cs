@@ -16,7 +16,8 @@ namespace LinkedList
             Console.WriteLine("Please choose an option");
             Console.WriteLine("\n1. Add element at last position \n2. Add element at first position " +
                 "\n3. Add element at last position using Append method\n4. Insert element at perticular position" +
-                "\n5. Delete first element of Linkedlist\n6. Delete Last Element of Linkedlist\n7. Find Node with value");
+                "\n5. Delete first element of Linkedlist\n6. Delete Last Element of Linkedlist\n7. Find Node with value" +
+                "\n8. Insert After value");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -73,6 +74,15 @@ namespace LinkedList
                     linkedList.AddLast(70);
                     linkedList.Display();
                     linkedList.Find(30);
+                    break;
+                case 8:
+                    Console.WriteLine("Insert After Value");
+                    linkedList.AddLast(56);
+                    linkedList.AddLast(30);
+                    linkedList.AddLast(70);
+                    linkedList.Display();
+                    linkedList.InsertAfter(30, 40);      
+                    linkedList.Display();
                     break;
                 default:
                     Console.WriteLine("Please enter the correct option");
