@@ -61,6 +61,15 @@ namespace LinkedList
                 Console.WriteLine("{0} is inserted at index position {1}",data,index);
             }
         }
+        public void Pop()
+        {
+            if (head != null)
+            {
+                head = head.next;
+                Console.WriteLine("\nFirst element deleted");
+            }
+        }
+
         public void Display()
         {
             Console.WriteLine("Displaying Nodes:");
